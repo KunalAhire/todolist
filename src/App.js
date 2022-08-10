@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
-
+import Login from './Component/Login';
+import Todo from './Component/Todo';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Navbar } from './Component/Navbar';
+import { Register } from './Component/Register';
 function App() {
+  const [signOut, setsignOut] = useState(false);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     
+      <BrowserRouter>
+      <Navbar signOut={signOut}/>
+      <Routes>
+          <Route path="/" element={<Login/>} />
+          <Route path="/signup" element={<Register />} />
+          <Route path="todo" element={<Todo signout={setsignOut}/>} />
+      </Routes>
+    </BrowserRouter>
     </div>
   );
 }
