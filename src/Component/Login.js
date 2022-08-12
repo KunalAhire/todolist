@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { db } from '../Firebaseconfig'
 import { collection, getDocs } from 'firebase/firestore';
 import {useNavigate ,Link} from "react-router-dom"
-import { Register } from './Register';
 const Login = () => {
     const navigate = useNavigate();
     const [users, setUsers] = useState([]);

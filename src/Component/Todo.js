@@ -52,7 +52,8 @@ const Todo = (props) => {
                                 </blockquote>
                             </div>
                     </div>
-                }
+               }
+               return null
             }) : null}
         </div>
     )
