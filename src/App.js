@@ -10,7 +10,6 @@ function App() {
   const [signOut, setsignOut] = useState(false);
   return (
     <div className="App">
-     
       <BrowserRouter>
       <Navbar signOut={signOut}/>
       <Routes>
