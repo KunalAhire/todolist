@@ -5,6 +5,7 @@ import Todo from './Component/Todo';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Navbar } from './Component/Navbar';
 import { Register } from './Component/Register';
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   const [signOut, setsignOut] = useState(false);
   return (
